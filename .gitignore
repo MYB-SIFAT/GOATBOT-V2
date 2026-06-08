@@ -11,5 +11,4 @@ dist/
 build/
 .vscode/
 .idea/
-database/
 logs/
