@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Access — GoatBot Control</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--bg:#070b14;
+--bg2:#0a1020;
+--card:rgba(8,16,32,0.92);
+--accent:#00b4d8;
+--accent2:#0090b0;
+--glow:rgba(0,180,216,0.18);
+--glowS:rgba(0,180,216,0.08);
+--text:#d0e8ff;
+--dim:#5a7a90;
+--border:rgba(0,160,200,0.18);
+--borderH:rgba(0,180,220,0.4);
+--red:#ff4060;
+--green:#00e887;
+--mono:'JetBrains Mono',monospace;
+--sans:'Inter',sans-serif;
+}
+html,body{height:100%;background:var(--bg);color:var(--text);font-family:var(--sans);}
+body{
+display:flex;align-items:center;justify-content:center;min-height:100vh;
+background-image:
+  radial-gradient(circle at 25% 25%, rgba(0,100,180,0.06) 0%, transparent 50%),
+  radial-gradient(circle at 75% 75%, rgba(0,60,120,0.08) 0%, transparent 50%),
+  radial-gradient(rgba(0,160,200,0.055) 1px, transparent 1px);
+background-size:100% 100%, 100% 100%, 28px 28px;
+overflow:hidden;
+}
+
+.bg-lines{
+position:fixed;inset:0;pointer-events:none;z-index:0;
+background:repeating-linear-gradient(0deg,transparent,transparent 59px,rgba(0,140,180,0.035) 60px);
+}
+.scan-h{
+position:fixed;top:0;left:0;right:0;height:2px;
+background:linear-gradient(90deg,transparent,var(--accent),transparent);
+animation:scanH 6s linear infinite;opacity:0.5;z-index:1;
+}
+@keyframes scanH{0%{top:-2px}100%{top:100vh}}
+
+.wrap{position:relative;z-index:2;width:100%;max-width:420px;padding:20px;}
+
+.brand{text-align:center;margin-bottom:32px;}
+.brand-icon{
+display:inline-flex;align-items:center;justify-content:center;
+width:64px;height:64px;
+background:linear-gradient(135deg,rgba(0,150,200,0.15),rgba(0,80,140,0.2));
+border:1px solid var(--borderH);border-radius:16px;
+font-size:28px;margin-bottom:16px;
+box-shadow:0 0 30px rgba(0,180,220,0.15);
+}
+.brand h1{
+font-family:var(--mono);font-size:22px;font-weight:700;letter-spacing:4px;
+color:#fff;text-shadow:0 0 20px rgba(0,200,255,0.5);
+}
+.brand p{
+font-family:var(--mono);font-size:11px;color:var(--dim);letter-spacing:3px;margin-top:6px;
+}
+
+.card{
+background:var(--card);
+border:1px solid var(--border);
+border-radius:16px;
+padding:36px 32px;
+backdrop-filter:blur(20px);
+box-shadow:0 0 60px rgba(0,140,200,0.08),inset 0 1px 0 rgba(255,255,255,0.04);
+}
+.card::before{
+content:'';position:absolute;inset:-1px;border-radius:17px;
+background:linear-gradient(135deg,rgba(0,180,220,0.12),transparent 50%,rgba(0,100,180,0.08));
+pointer-events:none;z-index:-1;
+}
+.card{position:relative;}
+
+.alert{
+display:flex;align-items:center;gap:10px;
+padding:12px 14px;border-radius:8px;margin-bottom:20px;font-size:13px;
+background:rgba(255,50,80,0.1);border:1px solid rgba(255,50,80,0.25);color:#ff7090;
+font-family:var(--mono);
+}
+.alert-icon{font-size:15px;}
+
+.form-group{margin-bottom:20px;}
+.form-label{
+display:block;font-family:var(--mono);font-size:10px;letter-spacing:2.5px;
+color:var(--dim);margin-bottom:8px;
+}
+.form-input{
+width:100%;padding:13px 16px;
+background:rgba(0,20,50,0.7);
+border:1px solid var(--border);border-radius:9px;
+color:var(--text);font-family:var(--mono);font-size:14px;
+outline:none;transition:border-color .2s,box-shadow .2s;
+}
+.form-input::placeholder{color:rgba(90,120,150,0.6);}
+.form-input:focus{
+border-color:var(--accent);
+box-shadow:0 0 0 3px var(--glowS),0 0 20px rgba(0,180,220,0.1);
+}
+
+.btn{
+width:100%;padding:14px;margin-top:8px;
+background:linear-gradient(135deg,rgba(0,150,200,0.25),rgba(0,100,160,0.2));
+border:1px solid var(--borderH);border-radius:9px;
+color:var(--text);font-family:var(--mono);font-size:13px;font-weight:600;letter-spacing:2px;
+cursor:pointer;outline:none;transition:all .2s;
+display:flex;align-items:center;justify-content:center;gap:10px;
+}
+.btn:hover{
+background:linear-gradient(135deg,rgba(0,180,220,0.3),rgba(0,130,190,0.25));
+box-shadow:0 0 30px rgba(0,180,220,0.2);border-color:var(--accent);
+color:#fff;
+}
+.btn:active{transform:scale(0.98);}
+
+.footer{
+text-align:center;margin-top:24px;
+font-family:var(--mono);font-size:10px;color:var(--dim);letter-spacing:1.5px;
+}
+.dot{
+display:inline-block;width:6px;height:6px;border-radius:50%;
+background:var(--green);box-shadow:0 0 8px var(--green);
+margin-right:6px;animation:pulse 2s ease-in-out infinite;
+}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+</style>
+</head>
+<body>
+<div class="bg-lines"></div>
+<div class="scan-h"></div>
+<div class="wrap">
+  <div class="brand">
+    <div class="brand-icon">⚡</div>
+    <h1>GOATBOT</h1>
+    <p>MULTIBOT CONTROL SYSTEM</p>
+  </div>
+  <div class="card">
+    <% if (it.error) { %>
+    <div class="alert"><span class="alert-icon">⚠</span><%= it.error %></div>
+    <% } %>
+    <form method="POST" action="/login">
+      <div class="form-group">
+        <label class="form-label">USERNAME</label>
+        <input type="text" name="username" class="form-input" placeholder="admin" autocomplete="username" required autofocus>
+      </div>
+      <div class="form-group">
+        <label class="form-label">PASSWORD</label>
+        <input type="password" name="password" class="form-input" placeholder="••••••••" autocomplete="current-password" required>
+      </div>
+      <button type="submit" class="btn">
+        <span>AUTHENTICATE</span>
+        <span>→</span>
+      </button>
+    </form>
+  </div>
+  <div class="footer"><span class="dot"></span>SECURE CONNECTION ESTABLISHED</div>
+</div>
+</body>
+</html>

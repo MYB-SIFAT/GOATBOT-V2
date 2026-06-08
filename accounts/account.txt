@@ -1,0 +1,36 @@
+[
+  {
+    "key": "datr",
+    "value": "M2wcankTNs2Z7VFex1nPU6xC",
+    "domain": "facebook.com",
+    "path": "/",
+    "secure": true,
+    "hostOnly": false,
+    "creation": "2026-06-08T10:43:56.220Z",
+    "lastAccessed": "2026-06-08T10:43:58.632Z"
+  },
+  {
+    "key": "fr",
+    "value": "12mf5Fr6HjdO9aCML.AWey_Zn9p2rTdeiKKxTYWfhu-ghVrkuRzD2BWY4moNYwEsZt4is.BqHzsr..AAA.0.0.BqJpzs.AWdzQICOkK33GvTUS-0cxGdapbI",
+    "expires": "2026-09-06T10:43:56.000Z",
+    "maxAge": 7776000,
+    "domain": "facebook.com",
+    "path": "/",
+    "secure": true,
+    "httpOnly": true,
+    "hostOnly": false,
+    "creation": "2026-06-08T10:43:56.228Z",
+    "lastAccessed": "2026-06-08T10:43:58.632Z",
+    "sameSite": "none"
+  },
+  {
+    "key": "sb",
+    "value": "6aGhaQYFze4mOKdDg5yHnTxd",
+    "domain": "facebook.com",
+    "path": "/",
+    "secure": true,
+    "hostOnly": false,
+    "creation": "2026-06-08T10:43:56.229Z",
+    "lastAccessed": "2026-06-08T10:43:58.632Z"
+  }
+]

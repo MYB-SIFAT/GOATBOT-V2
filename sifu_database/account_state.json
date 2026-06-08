@@ -1,0 +1,122 @@
+{
+  "health": {
+    "/home/runner/workspace/accounts/account.txt": 100,
+    "/home/runner/workspace/accounts/account2.txt": 0
+  },
+  "failCount": {
+    "/home/runner/workspace/accounts/account.txt": 4,
+    "/home/runner/workspace/accounts/account2.txt": 12
+  },
+  "failType": {
+    "/home/runner/workspace/accounts/account2.txt": "checkpoint",
+    "/home/runner/workspace/accounts/account.txt": "loginFail"
+  },
+  "failReason": {
+    "/home/runner/workspace/accounts/account2.txt": "Login failed: Unable to retrieve account identity. This may be caused by IP blocks, checkpoint walls, or invalid session cookies. Try re-authenticating via a browser first.",
+    "/home/runner/workspace/accounts/account.txt": "Invalid cookie: missing c_user"
+  },
+  "lastFailTime": {
+    "/home/runner/workspace/accounts/account.txt": 1780910297382,
+    "/home/runner/workspace/accounts/account2.txt": 1780910297379
+  },
+  "totalUptimeMs": {
+    "/home/runner/workspace/accounts/account.txt": 0,
+    "/home/runner/workspace/accounts/account2.txt": 0
+  },
+  "sessionCount": {
+    "/home/runner/workspace/accounts/account.txt": 5,
+    "/home/runner/workspace/accounts/account2.txt": 4
+  },
+  "msgSent": {
+    "/home/runner/workspace/accounts/account.txt": 0,
+    "/home/runner/workspace/accounts/account2.txt": 0
+  },
+  "msgFailed": {
+    "/home/runner/workspace/accounts/account.txt": 16,
+    "/home/runner/workspace/accounts/account2.txt": 12
+  },
+  "priority": {
+    "/home/runner/workspace/accounts/account.txt": 1,
+    "/home/runner/workspace/accounts/account2.txt": 1
+  },
+  "lockedAccounts": [
+    "/home/runner/workspace/accounts/account2.txt"
+  ],
+  "currentIndex": 0,
+  "switchCount": 9,
+  "switchHistory": [
+    {
+      "time": 1780757161406,
+      "from": "account.txt",
+      "to": "account.txt",
+      "trigger": "manual",
+      "reason": null,
+      "failType": null
+    },
+    {
+      "time": 1780848206008,
+      "from": "account.txt",
+      "to": "account2.txt",
+      "trigger": "manual",
+      "reason": "Login failed: Unable to retrieve account identity. This may be caused by IP blocks, checkpoint walls, or invalid session cookies. Try re-authenticating via a browser first.",
+      "failType": "checkpoint"
+    },
+    {
+      "time": 1780848614475,
+      "from": "account2.txt",
+      "to": "account.txt",
+      "trigger": "round-robin",
+      "reason": "Login failed: Unable to retrieve account identity. This may be caused by IP blocks, checkpoint walls, or invalid session cookies. Try re-authenticating via a browser first.",
+      "failType": "checkpoint"
+    },
+    {
+      "time": 1780849056031,
+      "from": "account.txt",
+      "to": "account2.txt",
+      "trigger": "manual",
+      "reason": "Login failed: Unable to retrieve account identity. This may be caused by IP blocks, checkpoint walls, or invalid session cookies. Try re-authenticating via a browser first.",
+      "failType": "checkpoint"
+    },
+    {
+      "time": 1780849453405,
+      "from": "account2.txt",
+      "to": "account.txt",
+      "trigger": "round-robin",
+      "reason": "Login failed: Unable to retrieve account identity. This may be caused by IP blocks, checkpoint walls, or invalid session cookies. Try re-authenticating via a browser first.",
+      "failType": "checkpoint"
+    },
+    {
+      "time": 1780849721771,
+      "from": "account.txt",
+      "to": "account2.txt",
+      "trigger": "manual",
+      "reason": "Login failed: Unable to retrieve account identity. This may be caused by IP blocks, checkpoint walls, or invalid session cookies. Try re-authenticating via a browser first.",
+      "failType": "checkpoint"
+    },
+    {
+      "time": 1780908767376,
+      "from": "account2.txt",
+      "to": "account.txt",
+      "trigger": "manual",
+      "reason": "Login failed: Unable to retrieve account identity. This may be caused by IP blocks, checkpoint walls, or invalid session cookies. Try re-authenticating via a browser first.",
+      "failType": "checkpoint"
+    },
+    {
+      "time": 1780910288427,
+      "from": "account.txt",
+      "to": "account2.txt",
+      "trigger": "round-robin",
+      "reason": "Login failed: Unable to retrieve account identity. This may be caused by IP blocks, checkpoint walls, or invalid session cookies. Try re-authenticating via a browser first.",
+      "failType": "checkpoint"
+    },
+    {
+      "time": 1780910297383,
+      "from": "account2.txt",
+      "to": "account.txt",
+      "trigger": "manual",
+      "reason": "Login failed: Unable to retrieve account identity. This may be caused by IP blocks, checkpoint walls, or invalid session cookies. Try re-authenticating via a browser first.",
+      "failType": "checkpoint"
+    }
+  ],
+  "savedAt": "2026-06-08T10:43:57.661Z"
+}

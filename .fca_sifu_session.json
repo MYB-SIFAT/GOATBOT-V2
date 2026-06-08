@@ -1,0 +1,41 @@
+{
+  "sessions": {
+    "61570696493977": {
+      "userID": "61570696493977",
+      "cookies": [
+        {
+          "key": "datr",
+          "value": "M2wcankTNs2Z7VFex1nPU6xC",
+          "domain": "facebook.com",
+          "path": "/",
+          "secure": true,
+          "httpOnly": false,
+          "expires": null
+        },
+        {
+          "key": "fr",
+          "value": "12mf5Fr6HjdO9aCML.AWey_Zn9p2rTdeiKKxTYWfhu-ghVrkuRzD2BWY4moNYwEsZt4is.BqHzsr..AAA.0.0.BqJpzs.AWdzQICOkK33GvTUS-0cxGdapbI",
+          "domain": "facebook.com",
+          "path": "/",
+          "secure": true,
+          "httpOnly": true,
+          "expires": 1788691436000
+        },
+        {
+          "key": "sb",
+          "value": "6aGhaQYFze4mOKdDg5yHnTxd",
+          "domain": "facebook.com",
+          "path": "/",
+          "secure": true,
+          "httpOnly": false,
+          "expires": null
+        }
+      ],
+      "savedAt": 1780915437313,
+      "savedDate": "2026-06-08T10:43:57.313Z",
+      "version": 2
+    }
+  },
+  "lastUserID": "61570696493977",
+  "updatedAt": 1780915437313
+}
