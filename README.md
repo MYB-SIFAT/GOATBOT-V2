@@ -1,3 +1,13 @@
+# Put your Facebook cookie in the accounts folder..!¡
+
+
+<img src="https://raw.githubusercontent.com/MYB-SIFAT/GOATBOT-V2/refs/heads/main/sifu_database/Screenshot_20260622-171316.jpg"/>
+
+
+
+
+
+
 <div align="center">
   <a href="https://github.com/ntkhang03" style="text-decoration: none;">
     <img src="https://img.shields.io/badge/🏆%20ORIGINAL%20CREATOR-NTKhang-430098?style=for-the-badge&logo=github&logoColor=white" />
