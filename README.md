@@ -1,4 +1,4 @@
-# Put your Facebook cookie in the accounts folder..!¡
+## Put your Facebook cookie in the accounts folder..!¡
 
 
 <img src="https://raw.githubusercontent.com/MYB-SIFAT/GOATBOT-V2/refs/heads/main/sifu_database/Screenshot_20260622-171316.jpg"/>
